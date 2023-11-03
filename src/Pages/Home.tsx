@@ -1,12 +1,14 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import Container from "../Layouts/Container";
+import BasicLayout from "../Layouts/BasicLayout";
 
 // type Props = {}
 
 const Home = () => {
   return (
-    <Box>
+    <BasicLayout>
+
       <Box
         bgImage="linear-gradient(to top, black, transparent),url(/spotlight.jpg)"
         bgSize="cover"
@@ -35,7 +37,9 @@ const Home = () => {
           </Flex>
         </Container>
       </Box>
-    </Box>
+
+    </BasicLayout>
+   
   );
 };
 
