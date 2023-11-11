@@ -7,7 +7,7 @@ type Props = {
 
 const Container = ({children}: Props) => {
   return (
-    <Box mx={"auto"} maxW={{ base:"container.sm", md:"6xl" }} h="100%">
+    <Box mx={"auto"} maxW={{ base:"container.sm", md:"6xl" }} h="100%" boxSizing="border-box">
         {children}
     </Box>
   )

@@ -1,42 +1,19 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
-import React from "react";
-import Container from "../Layouts/Container";
+import { Box, Button, Center } from '@chakra-ui/react'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 // type Props = {}
 
 const Home = () => {
   return (
-    <Box>
-      <Box
-        bgImage="linear-gradient(to top, black, transparent),url(/spotlight.jpg)"
-        bgSize="cover"
-        bgPos="bottom"
-        bgRepeat="no-repeat"
-        height="100vh"
-      >
-        <Container>
-          <Flex height="100%" alignItems="flex-end">
-            <Box width="fit-content" mb="2rem">
-                <Box position={"relative"}>
-                <Text mx="auto" color="white" fontWeight="700" fontSize="1.2rem" width="10rem">
-                        Authentic & True
-                    </Text>
-                    
-                    
-                </Box>
-                <Box bg="linear-gradient(to left, transparent, white, transparent)" mt="1rem" height="4px">
-                    </Box>
-              <Text fontFamily="Foldit" fontSize="8rem" mt="1rem">
-                The Spotlight
-              </Text>
-              <Box bg="linear-gradient(to left, transparent, white, transparent)" height="4px">
-                    </Box>
-            </Box>
-          </Flex>
-        </Container>
-      </Box>
+    <Box py="2rem">
+        <Center>
+            <Button as={Link} to="/contact-us" w="fit-content" rounded={0} bgColor="black" color="white" cursor={"pointer"} _hover={{  }}>
+Contact-us
+            </Button>
+        </Center>
     </Box>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
