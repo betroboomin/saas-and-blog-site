@@ -1,16 +1,20 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
-import UserIcon from "../assets/icons/user-icon";
-import SignOutIcon from "../assets/icons/signout-icon";
+import { Link, useSearchParams } from "react-router-dom";
+import UserIcon from "../assets/Icons/user-icon";
 import SettinIcon from "../assets/icons/setting-icon";
+import SignOutIcon from "../assets/Icons/signout-icon";
 
 // type Props = {}
 export const puple500 = "#805AD5";
  export  const pink500 = "#D53F8C";
 const Navbar = () => {
+//   const [searchParams] = useSearchParams();
+//   const currentLink = searchParams.get('to')
+//  console.log({currentLink})
   
 
-  const [isActive, setIsActive] = useState<number | null>(0);
+  const [isActive, setIsActive] = useState<number | null>(null);
   const [isProfileClicked, setIsProfileClicked] = useState(false)
 
   const handleProfile = ()=>{
@@ -95,9 +99,12 @@ const Navbar = () => {
               }
               onClick={() => handleIsActive(item.id)}
             >
+              <Link to={item.url}>
               <Text as="span" position="relative" color="">
                 {item.title}
               </Text>
+              </Link>
+              
             </Text>
           ))}
         </Flex>
@@ -113,6 +120,7 @@ const Navbar = () => {
             px="2rem"
           >
             <Flex height="100%" alignItems={"center"} gap="1rem">
+              <Link to='/ENo/signup'>
               <Text
                 color="black"
                 bgColor="white"
@@ -122,6 +130,20 @@ const Navbar = () => {
               >
                 signUp
               </Text>
+              </Link>
+             
+              <Link to="/ENo/login">
+              <Text
+                color="black"
+                bgColor="white"
+                fontWeight="600"
+                p=".4rem 1rem"
+                rounded="full"
+              >
+                login
+              </Text>
+              </Link>
+              
               <Box width="fit-content" position="relative" onClick={handleProfile}>
                 <Box
                   transform="translateX(5px)"
@@ -203,10 +225,10 @@ const Navbar = () => {
   );
 };
 const navbarLinks = [
-  { id: 1, title: "Home", url: "/" },
-  { id: 2, title: "About", url: "/about" },
-  { id: 3, title: "Services", url: "/services" },
-  { id: 4, title: "Products", url: "/products" },
-  { id: 5, title: "Contact", url: "/contact" },
+  { id: 1, title: "Home", url: "" },
+  { id: 2, title: "About", url: "about/" },
+  { id: 3, title: "Services", url: "services/" },
+  { id: 4, title: "Products", url: "products/" },
+  { id: 5, title: "Contact", url: "contact/" },
 ];
 export default Navbar;
