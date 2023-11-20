@@ -127,6 +127,7 @@ const handleMargin = (i:number)=> {
                     heading={item}
                     imageIcon={imageIcon}
                     icon={<MagicIcon h="100%" w="100%" />}
+                    seeMore={true}
                   />
                 </Box>
               ))}
@@ -172,7 +173,7 @@ const handleMargin = (i:number)=> {
               </Text>
               <Heading
                 my="2rem"
-                w="40%"
+                w="60%"
                 fontFamily="montserrat"
                 textAlign="center"
               >
@@ -182,12 +183,12 @@ const handleMargin = (i:number)=> {
                 Became a member
               </Button>
 
-              <Flex gap={"2rem"} width="100%" flexWrap={"wrap"}>
+              <Flex gap={"2rem"} width="100%" flexWrap={"wrap"} justifyContent="center">
   {imageGallery.slice(0,10).map((item, i) => (
     <Box
       h="20rem"
       key={i}
-      flex="0 0 18.2%"
+      flex="0 0 17.895%"
       rounded="lg"
       overflow="hidden"
       marginTop={handleMargin(i)}
