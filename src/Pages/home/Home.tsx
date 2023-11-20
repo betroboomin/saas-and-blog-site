@@ -6,9 +6,9 @@ import SettinIcon from "../../assets/icons/setting-icon";
 import { pink500, puple500 } from "../../Component/Navbar";
 import CardOverLay from "../../Component/cardOverLay";
 import Container from "../../Layouts/Container";
-import MagicIcon from "../../assets/icons/MagicIcon";
 import LargeCard from "./components/LargeCard";
 import ScrollCarousel from 'scroll-carousel-react';
+import MagicIcon from "../../assets/Icons/MagicIcon";
 
 // type Props = {}
 
@@ -18,7 +18,7 @@ const handleMargin = (i:number)=> {
   return mt
 }
   return (
-    <BasicLayout>
+    <Box>
       <Box>
         <Box
           bgImage="linear-gradient(to top, black, transparent),url(/spotlight.jpg)"
@@ -40,7 +40,8 @@ const handleMargin = (i:number)=> {
                     color="white"
                     fontWeight="700"
                     fontSize="1.2rem"
-                    width="10rem"
+                    width="100%"
+                    textAlign="center"
                   >
                     Authentic & True
                   </Text>
@@ -58,7 +59,7 @@ const handleMargin = (i:number)=> {
                   height="4px"
                 ></Box>
               </Box>
-              <Box bg="gray.200" rounded="lg" width="fit-content">
+              <Box  width="45%">
                 <Flex
                   px="1rem"
                   alignItems={"center"}
@@ -67,12 +68,12 @@ const handleMargin = (i:number)=> {
                   bg={`linear-gradient(to left,${pink500}, ${puple500})`}
                   bgClip="text"
                 >
-                  <SettinIcon
+                  {/* <SettinIcon
                     width="2rem"
                     height="2rem"
                     fill={`linear-gradient(to left,${pink500}, ${puple500})`}
-                  />
-                  <Text fontSize={"1.5rem"} fontWeight="700">
+                  /> */}
+                  <Text fontSize={"1.5rem"} width="100%" textAlign="center" fontWeight="700">
                     Socialise and market...
                   </Text>
                 </Flex>
@@ -153,7 +154,7 @@ const handleMargin = (i:number)=> {
                 free, so you get a test of the lesson
               </Text>
               <Flex width="40%" gap="1rem">
-                <Input type="text" width="60%" />
+                <Input type="text" width="60%" placeholder="Enter Email" />
                 <Button bgColor="#0f0f0f" color="white" p=".5rem 1rem">
                   Send Preview
                 </Button>
@@ -208,7 +209,7 @@ const handleMargin = (i:number)=> {
           </Container>
         </Box>
       </Box>
-    </BasicLayout>
+    </Box>
   );
 };
 
