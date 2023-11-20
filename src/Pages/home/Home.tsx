@@ -8,7 +8,8 @@ import CardOverLay from "../../Component/cardOverLay";
 import Container from "../../Layouts/Container";
 import LargeCard from "./components/LargeCard";
 import ScrollCarousel from 'scroll-carousel-react';
-import MagicIcon from "../../assets/Icons/MagicIcon";
+import MagicIcon from "../../assets/icons/MagicIcon";
+
 
 // type Props = {}
 

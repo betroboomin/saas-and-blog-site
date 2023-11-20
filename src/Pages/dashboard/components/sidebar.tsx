@@ -1,7 +1,8 @@
 import { Flex, Img, Text } from '@chakra-ui/react'
 import React,{useState} from 'react'
-import MagicIcon from '../../../assets/Icons/MagicIcon'
+
 import { pink500, puple500 } from '../../../Component/Navbar'
+import MagicIcon from '../../../assets/icons/MagicIcon'
 
 // type Props = {
 //     // Icons: React.ReactNode

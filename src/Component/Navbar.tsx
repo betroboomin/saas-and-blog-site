@@ -1,9 +1,11 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
-import UserIcon from "../assets/Icons/user-icon";
+import { Link} from "react-router-dom";
+
 import SettinIcon from "../assets/icons/setting-icon";
-import SignOutIcon from "../assets/Icons/signout-icon";
+import UserIcon from "../assets/icons/user-icon";
+import SignOutIcon from "../assets/icons/signout-icon";
+
 
 // type Props = {}
 export const puple500 = "#805AD5";
